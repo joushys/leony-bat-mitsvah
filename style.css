@@ -1,0 +1,213 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f6f1;
+    font-family: 'Cormorant Garamond', serif;
+    position: relative;
+  }
+  
+  /* Conteneur A4 */
+  .a4-page {
+    width: 210mm;
+    height: 297mm;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  /* Contenu centré */
+  .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  /* Titres */
+  h1 {
+    font-size: 48px;
+    color: #333;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+  }
+  
+  h3 {
+    font-size: 32px;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  h3 .name {
+    color: #dd128c;
+    font-weight: bold;
+  }
+  
+  /* Texte */
+  p {
+    font-size: 25px;
+    color: #3d3d3d;
+    margin: 5px 0;
+  }
+  
+  /* Texture de fond */
+  .a4-page::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://www.transparenttextures.com/patterns/fabric-of-squares.png');
+    opacity: 0.03;
+    pointer-events: none;
+  }
+  
+  /* Polaroids */
+  .polaroids {
+    position: absolute;
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+    top: 20px;
+    left: 20px;
+    margin: 0 auto;
+    pointer-events: none; /* ✅ permet de cliquer à travers */
+  }
+  
+  .polaroid {
+    position: absolute;
+    width: 200px;
+    background: white;
+    padding: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
+    color: #555;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    pointer-events: auto; /* ✅ les images restent interactives */
+  }
+  
+  
+  .polaroid:hover {
+    transform: scale(1.05) rotate(0deg);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .polaroid img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 8px;
+    max-width: 100%;
+  }
+  
+  /* Séparateur */
+  .separator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .separator::before,
+  .separator::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: #c59d5f;
+  }
+  
+  .separator span {
+    font-family: 'Dancing Script', cursive;
+    font-size: 25px;
+    color: #c59d5f;
+    margin: 0 15px;
+  }
+  
+  /* Coming Soon */
+  .coming-soon-container {
+    position: absolute;
+    top: 55%;
+    left: 250px;
+    transform: translateY(-50%) rotate(5deg);
+  }
+  
+  .coming-soon-container img {
+    width: 200px;
+    height: auto;
+  }
+  
+  /* Déco */
+  .deco img {
+    width: 200px;
+    height: auto;
+    position: absolute;
+    top: 20%;
+    right: 12%;
+    transform: translateY(-50%);
+  }
+  
+  /* === Formulaire en bas === */
+  .formulaire-rsvp {
+    background-color: #fef9f6;
+    padding: 20px;
+    border-top: 1px solid #e5e5e5;
+    text-align: center;
+    margin-top: auto;
+  padding-top: 20px;
+
+  }
+  
+  .formulaire-rsvp h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .formulaire-rsvp form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .formulaire-rsvp label {
+    font-size: 18px;
+    color: #555;
+  }
+  
+  .formulaire-rsvp input[type="radio"],
+  .formulaire-rsvp input[type="number"] {
+    margin: 5px;
+  }
+  
+  .formulaire-rsvp button {
+    background-color: #dd128c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .formulaire-rsvp button:hover {
+    background-color: #b71072;
+  }
+  
